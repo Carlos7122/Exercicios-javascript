@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    
+    <h1>Trabalhando com Dados v2.0</h1>
+    <a href="index.html">Voltar ao inicio</a><br><br><br>
+    <button class="botao">Clique para começar</button>
+    <p class="texto">Aqui vai aparecer o resultado...</p>
+
+    <script>
+        const botao = document.querySelector('.botao');
+        const texto = document.querySelector('.texto');
+
+        botao.onclick = function(){
+            const nome = window.prompt('Qual é o seu nome');
+            texto.innerHTML = `Olá, ${nome}! É um grande prazer te conhecer! 🖖`;
+        }
+    </script>
+</body>
+</html>
