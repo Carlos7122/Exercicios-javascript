@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <a href="index.html">Voltar ao inicio</a><br><br><br>
+    <button class="botao" onclick="calculadora()">Clique para calcular</button>
+    <p class="texto">O resultado aparece aqui...</p>
+    <section class="calculos">
+
+    </section>
+
+    <script>
+        const botao = document.querySelector('.botao');
+        const texto = document.querySelector('.texto');
+
+        function calculadora(){
+            const numero = window.prompt('Digite um número:');
+
+            texto.innerHTML = `O número a ser analisado aqui sera o ${numero}`;
+            const abs = Math.abs(numero);
+            const inteiro = Math.trunc(numero);
+            const arredondar = Math.round(numero);
+            const raizQuadrada = Math.sqrt(numero);
+            const raizCubica = Math.cbrt(numero);
+            const aoQuadrado = Math.pow(numero, 2);
+            const aoCubo = Math.pow(numero, 3);
+
+            let sessao = document.querySelector('.calculos');
+            sessao.innerHTML = `<p>O valor absoluto é ${abs}</p>`;
+            sessao.innerHTML += `<p>A sua parte inteira é ${inteiro}</p>`;
+            sessao.innerHTML += `<p>O valor inteiro mais proximo é ${arredondar}</p>`;
+            sessao.innerHTML += `<p>A sua raiz quadrada é ${raizQuadrada}</p>`;
+            sessao.innerHTML += `<p>A sua raiz cúbica é ${raizCubica}</p>`;
+            sessao.innerHTML += `<p>O valor de ${numero}² é ${aoQuadrado}</p>`;
+            sessao.innerHTML += `<p>O valor de ${numero}³ é ${aoCubo}</p>`;
+        }
+
+    </script>
+</body>
+</html>
