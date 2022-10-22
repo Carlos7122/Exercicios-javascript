@@ -10,13 +10,28 @@
     <h1>Contador de cliques</h1>
     <a href="index.html">Voltar ao inicio</a><br><br><br>
     <button class="botao1" onclick="contagem()">Clique em mim</button>
-    <button class="botao2">Zerar o contador</button>
-    <p class="texto"></p>
+    <button class="botao2" onclick="zerar()">Zerar o contador</button>
+    <p class="texto">O contador está com 0 cliques</p>
 
     <script>
         const botao1 = document.querySelector('.botao1');
         const botao2 = document.querySelector('.botao2');
         const texto = document.querySelector('.texto');
+
+        let contador = 0;
+
+        function contagem() {
+            for(let i = 0; i <= contador; i++){
+                contador++;
+                texto.innerHTML = `O contador está com ${contador} cliques`;
+                break
+            }
+        }
+
+        function zerar() {
+            texto.innerHTML = "";
+            contador = 0;
+        }
     </script>
 </body>
 </html>

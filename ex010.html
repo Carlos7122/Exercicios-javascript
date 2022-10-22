@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+    <a href="index.html">Voltar ao inicio</a><br><br><br>
+    <button class="botao1" onclick="clicouNoBotao()">Ação 1</button>
+    <button class="botao2" onclick="clicouNoBotao()">Ação 2</button>
+    <button class="botao3" onclick="clicouNoBotao()">Ação 3</button>
+    <button class="botao4" onclick="clicouNoBotao()">Ação 4</button>
+    <p>Aqui vou registrar suas ações com os botões acima</p>
+    <section class="texto"></section>
+
+    <script>
+        const botao1 = document.querySelector('.botao1');
+        const botao2 = document.querySelector('.botao2');
+        const botao3 = document.querySelector('.botao3');
+        const botao4 = document.querySelector('.botao4');
+        let texto = document.querySelector('.texto');
+
+        function clicouNoBotao(){
+            texto.innerHTML += `<p>Você clicou na</p>`;
+        }
+    </script>
+</body>
+</html>
